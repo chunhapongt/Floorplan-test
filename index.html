@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BITEC EH 103 Floorplan Visualizer</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: sans-serif; }
+        #ui-panel { position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; z-index: 100; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <div id="ui-panel">
+        <h3>EH 103 Layout Planner</h3>
+        <label>Chairs: </label><input type="number" id="chairs" value="5000"><br><br>
+        <label>Stage: 17.08 x 4.88 m</label><br><br>
+        <button onclick="generateLayout()">Update Layout</button>
+    </div>
+    <!-- โหลด Three.js ผ่าน CDN -->
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js" } }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
